@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Satisfy", cursive;
+}
+
+.navbar {
+  background-color: #babdd1;
+}
+
+.logo {
+  width: 82%;
+}
+
+a img {
+  width: 160px;
+  height: 160px;
+  margin-left: -19px;
+}
+
+.greeting {
+  background-color: #767ba3;
+  width: 100%;
+}
+.greeting span {
+  line-height: 2.8rem;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+  display: flex;
+  padding-top: 10px;
+  font-size: 26px;
+}
+
+.descript {
+  background-color: #1c2466;
+  width: 100%;
+}
+.descript span {
+  line-height: 2.8rem;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+  display: flex;
+  padding-top: 10px;
+  font-size: 26px;
+  color: #fff;
+}
+
+/*# sourceMappingURL=style.css.map */

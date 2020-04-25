@@ -1,0 +1,61 @@
+// fonts
+$title-font: "Sarala", sans-serif;
+$body-font: "Satisfy", cursive;
+// color scheme
+$background-color: #babdd1;
+$accentB-color: #1c2466;
+$accentP-color: #767ba3;
+$title-color: #1b1f46;
+// 
+@mixin home-span {
+  line-height: 2.8rem;
+  letter-spacing: 0.2rem;
+  justify-content: center;
+  display: flex;
+  padding-top: 10px;
+  font-size: 26px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: $body-font;
+}
+
+// Navbar
+.navbar {
+  background-color: $background-color;
+}
+
+.logo {
+  width: 82%;
+}
+
+a {
+  img {
+    width: 160px;
+    height: 160px;
+    margin-left: -19px;
+  }
+}
+
+// home
+
+.greeting {
+  background-color: $accentP-color;
+  width: 100%;
+
+  span {
+    @include home-span;
+  }
+}
+
+.descript {
+  background-color: $accentB-color;
+  width: 100%;
+
+  span {
+    @include home-span;
+    color: #fff;
+  }
+}
