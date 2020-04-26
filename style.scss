@@ -1,4 +1,6 @@
 // fonts
+@import "scss/fontawesome.scss";
+@import "scss/solid.scss";
 $title-font: "Sarala", sans-serif;
 $body-font: "Satisfy", cursive;
 // color scheme
@@ -6,15 +8,19 @@ $background-color: #babdd1;
 $accentB-color: #1c2466;
 $accentP-color: #767ba3;
 $title-color: #1b1f46;
-// 
+
+
+
 @mixin home-span {
-  line-height: 2.8rem;
+  line-height: 3rem;
   letter-spacing: 0.2rem;
-  justify-content: center;
+  
   display: flex;
   padding-top: 10px;
   font-size: 26px;
+  padding-bottom: 10px;
 }
+
 
 * {
   margin: 0;
@@ -27,15 +33,13 @@ $title-color: #1b1f46;
   background-color: $background-color;
 }
 
-.logo {
-  width: 82%;
-}
 
-a {
+
+.navbar {
   img {
-    width: 160px;
-    height: 160px;
-    margin-left: -19px;
+    width: 50px;
+    height: 50px;
+   
   }
 }
 
@@ -44,7 +48,7 @@ a {
 .greeting {
   background-color: $accentP-color;
   width: 100%;
-
+  padding: 10px;
   span {
     @include home-span;
   }
@@ -53,9 +57,64 @@ a {
 .descript {
   background-color: $accentB-color;
   width: 100%;
-
+  color: #fff;
+  padding: 10px;
   span {
     @include home-span;
-    color: #fff;
+    // color: #fff;
   }
 }
+
+.title{
+    text-align: center;
+    background-color: $title-color;
+    color: #fff;
+    padding: 30px;
+    font-family: $title-font;
+    text-transform: uppercase;
+}
+
+
+
+.greeting span:nth-child(2){
+    justify-content: center;
+}
+
+.greeting span:nth-child(3){
+    justify-content: flex-end;
+    
+}
+.descript span:nth-child(3){
+    justify-content: start;
+   
+}
+.descript span:nth-child(2){
+    justify-content: center;
+   
+}
+
+.descript span:nth-child(1){
+    justify-content: flex-end;
+  
+}
+// About
+#about, #skills, #projects, #contact{
+    padding-top: 25px;
+    padding-bottom: 20px;
+}
+
+.about-me{
+    padding: 20px;
+    background-color: $background-color;
+}
+.about-me img{
+    width: 30%;
+    float: right;
+    border-radius: 10px;
+}
+
+.about-me p{
+    display: inline;
+}
+
+// Skills
