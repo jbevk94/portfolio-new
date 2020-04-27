@@ -4,8 +4,7 @@
 @import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 @import "scss/fontawesome.scss";
 @import "scss/solid.scss";
-
-
+// fonts
 $title-font: "Sarala", sans-serif;
 $body-font: "Satisfy", cursive;
 // color scheme
@@ -13,158 +12,331 @@ $background-color: #babdd1;
 $accentB-color: #1c2466;
 $accentP-color: #767ba3;
 $title-color: #1b1f46;
-@mixin home-span {
-    line-height: 3rem;
-    letter-spacing: 0.2rem; 
-    display: grid;
-    padding-top: 10px;
-    font-size: 26px;
-    padding-bottom: 10px;
+$break-tablet: 992px;
+
+@mixin size($size) {
+  @if $size == small {
+    @media screen and (max-width: 40em) {
+      @content;
+    }
+  } @else if $size == medium {
+    @media screen and (min-width: 40em) and (max-width: 64em) {
+      @content;
+    }
+  } @else if $size == large {
+    @media screen and (min-width: 64em) {
+      @content;
+    }
   }
+}
+
+@mixin home-span {
+  line-height: 3rem;
+  letter-spacing: 0.2rem;
+  display: grid;
+  padding-top: 10px;
+  font-size: 26px;
+  padding-bottom: 10px;
+}
+
+@mixin splitHome{
+    line-height: 4rem;
+    margin-bottom: 80px;
+    width: 50%;
+    text-shadow: black 1px 1px;
+}
+
+@mixin splitHomeSpan{
+    line-height: 4rem;
+    margin: 4px;
+}
+
 * {
   margin: 0;
   padding: 0;
-//   font-family: $body-font;
+  //   font-family: $body-font;
 }
-
-
-// fonts
-
-
-
-
-
-
-
-
-
-.container-fluid{
-    padding-right: 0px !important;
-    padding-left: 0px !important;
-
-}
-
-
-// Navbar
-.navbar {
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
   background-color: $background-color;
-}
+  overflow: hidden;
 
-
-
-.navbar {
-  img {
-    width: 50px;
-    height: 50px;
-   
+  // Navbar
+  .navbar {
+    background-color: $background-color;
   }
-}
 
-// home
-
-.greeting {
-  background-color: $accentP-color;
-  width: 100%;
-  padding: 10px;
-  span {
-    @include home-span;
+  .navbar {
+    img {
+      width: 50px;
+      height: 50px;
+    }
   }
-}
 
-.descript {
-  background-color: $accentB-color;
-  width: 100%;
-  color: #fff;
-  padding: 10px;
-  span {
-    @include home-span;
-    // color: #fff;
+  // home
+
+  .greeting {
+    background-color: $accentP-color;
+    width: 100%;
+    padding: 10px;
+    text-shadow: black 1px 1px;
+    span {
+      @include home-span;
+    }
   }
-}
 
-.title{
+  .descript {
+    background-color: $accentB-color;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+    span {
+      @include home-span;
+      // color: #fff;
+    }
+  }
+
+  .title {
     text-align: center;
     background-color: $title-color;
     color: #fff;
+    text-shadow: black 1px 1px;
     padding: 30px;
     font-family: $title-font;
     text-transform: uppercase;
-}
+  }
 
-
-
-.greeting span:nth-child(2){
+  .greeting span:nth-child(2) {
     justify-content: center;
-}
+  }
 
-.greeting span:nth-child(3){
+  .greeting span:nth-child(3) {
     justify-content: flex-end;
-    
-}
-.descript span{
+  }
+  .descript span {
     justify-content: center;
-   
-}
+  }
 
-
-// All Pages
-#about, #skills, #projects, #contact{
+  // All Pages
+  #about,
+  #skills,
+  #projects,
+  #contact {
     padding-top: 25px;
     padding-bottom: 20px;
-}
+  }
 
-.about-me, .my-skills, .my-projects, .my-contact{
-    padding: 20px;
-    background-color: $background-color;
-}
+  .about-me,
+  .my-skills,
+  .my-projects,
+  .my-contact {
+    padding: 40px;
+    
+  }
 
-// About Me
-.about-me img{
+  // About Me
+  .about-me img {
     width: 30%;
     float: right;
-    border-radius: 10px;
-}
+    border-radius: 16px;
+    padding: 10px;
+  }
 
-.about-me p{
+  .about-me p {
     display: inline;
-}
+  }
 
-// Skills
-.ldBar{
+  // Skills
+  .ldBar {
     width: 100%;
-}
+  }
 
-.fundamentals{
+  .fundamentals {
     justify-content: flex-end;
-}
+  }
 
-// Projects
+  // Projects
 
-.card img{
+  .card img {
     width: 100%;
-}
+  }
 
-.card{
+  .card {
     text-align: center;
     margin-bottom: 20px;
-}
+  }
 
-.fundamentals, .libraries{
+  .fundamentals,
+  .libraries {
     padding-bottom: 30px;
-}
+  }
 
-.fundamentals span{
+  .fundamentals span {
     float: left;
-    
-}
-.ldBar{
+  }
+  .ldBar {
     float: right;
-}
+  }
 
-
-
-.my-contact{
+  .my-contact {
     letter-spacing: 2px;
     line-height: 2.4rem;
-}
+    
+    padding-bottom: 200px;
+    text-align: center;
+  }
 
+
+  // Ipad View
+  @include size(medium) {
+    //   Home Page
+    .greeting {
+      @include splitHome;
+      float: left;
+      
+      
+    }
+    .descript {
+    @include splitHome;
+      float: right;
+      
+    }
+
+   
+
+    .descript span,
+    .greeting span {
+      @include splitHomeSpan;
+    }
+    
+    .descript span:nth-child(1) {
+      justify-content: flex-end;
+    }
+    .descript span:nth-child(3) {
+      justify-content: flex-start;
+    }
+    // About Page
+    .about-me p{
+        height: auto;
+        line-height: 3rem;
+        padding: 8px;
+        margin: 8px;
+    }
+
+    .about-me img{
+        margin: 10px;
+        box-shadow: $accentB-color 14px 14px;
+    }
+//    Product Page
+    .card{
+        margin: 20px;
+    }
+  }
+  @include size(large) {
+    // Home Page
+    .navbar-brand{
+        float: left;
+    }
+    .nav-link{
+        float: right;
+    }
+    .descript{
+        @include splitHome;
+        float: right;
+        height: auto;
+    }
+    .greeting{
+        @include splitHome;
+       float: left;
+       height: auto;
+        
+    }
+    .descript span,
+    .greeting span {
+     font-size: 42px;
+     padding: 90px;
+    }
+   
+    .descript span:nth-child(1) {
+        justify-content: flex-end;
+      }
+      .descript span:nth-child(3) {
+        justify-content: flex-start;
+      }
+    //About Page
+    .about-me {
+        padding: 200px 40px;
+        line-height: 4rem;
+        text-align: center;
+        font-size: 22px;
+        margin-right: 10px;
+    }
+
+
+    .about-me img{
+        width: 18%;
+        box-shadow: $accentB-color 14px 14px;
+        margin-left: 10px;
+        margin-bottom: 60px;
+    
+    }
+    // Skills
+
+
+    .fundamentals h2, .libraries h2{
+        font-size: 32px;
+        letter-spacing: 0.2rem;
+        padding-top: 20px;
+    }
+
+    .fundamentals{
+        float: left;
+        
+    }
+
+    .fundamentals .ldBar{
+        padding-left: 24px;
+    }
+    .libraries{
+        float: right;
+    }
+    .my-skills{
+        height: auto;
+        padding-bottom: 400px;
+        line-height: 4rem;
+        padding-left: 260px;
+        padding-right: 260px;
+    }
+    // Project Page
+    .my-projects{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .card{
+        width: 30%;
+        display: inline-block;
+        margin-left: 50px;
+        
+    }
+    // Contact Page
+    .my-links{
+        float: right;
+    }
+    .my-info{
+        float: left;
+        padding-left: 30rem;
+    }
+
+    .my-contact{
+        text-align: center;
+        padding-bottom: 100px;
+        line-height: 3rem;
+        font-size: 22px;
+        padding-top: 80px;
+    }
+
+  }
+
+}

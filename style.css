@@ -6007,23 +6007,23 @@ readers do not read off random characters that represent icons */
 .container-fluid {
   padding-right: 0px !important;
   padding-left: 0px !important;
+  background-color: #babdd1;
+  overflow: hidden;
 }
-
-.navbar {
+.container-fluid .navbar {
   background-color: #babdd1;
 }
-
-.navbar img {
+.container-fluid .navbar img {
   width: 50px;
   height: 50px;
 }
-
-.greeting {
+.container-fluid .greeting {
   background-color: #767ba3;
   width: 100%;
   padding: 10px;
+  text-shadow: black 1px 1px;
 }
-.greeting span {
+.container-fluid .greeting span {
   line-height: 3rem;
   letter-spacing: 0.2rem;
   display: grid;
@@ -6031,14 +6031,13 @@ readers do not read off random characters that represent icons */
   font-size: 26px;
   padding-bottom: 10px;
 }
-
-.descript {
+.container-fluid .descript {
   background-color: #1c2466;
   width: 100%;
   color: #fff;
   padding: 10px;
 }
-.descript span {
+.container-fluid .descript span {
   line-height: 3rem;
   letter-spacing: 0.2rem;
   display: grid;
@@ -6046,80 +6045,206 @@ readers do not read off random characters that represent icons */
   font-size: 26px;
   padding-bottom: 10px;
 }
-
-.title {
+.container-fluid .title {
   text-align: center;
   background-color: #1b1f46;
   color: #fff;
+  text-shadow: black 1px 1px;
   padding: 30px;
   font-family: "Sarala", sans-serif;
   text-transform: uppercase;
 }
-
-.greeting span:nth-child(2) {
+.container-fluid .greeting span:nth-child(2) {
   justify-content: center;
 }
-
-.greeting span:nth-child(3) {
+.container-fluid .greeting span:nth-child(3) {
   justify-content: flex-end;
 }
-
-.descript span {
+.container-fluid .descript span {
   justify-content: center;
 }
-
-#about, #skills, #projects, #contact {
+.container-fluid #about,
+.container-fluid #skills,
+.container-fluid #projects,
+.container-fluid #contact {
   padding-top: 25px;
   padding-bottom: 20px;
 }
-
-.about-me, .my-skills, .my-projects, .my-contact {
-  padding: 20px;
-  background-color: #babdd1;
+.container-fluid .about-me,
+.container-fluid .my-skills,
+.container-fluid .my-projects,
+.container-fluid .my-contact {
+  padding: 40px;
 }
-
-.about-me img {
+.container-fluid .about-me img {
   width: 30%;
   float: right;
-  border-radius: 10px;
+  border-radius: 16px;
+  padding: 10px;
 }
-
-.about-me p {
+.container-fluid .about-me p {
   display: inline;
 }
-
-.ldBar {
+.container-fluid .ldBar {
   width: 100%;
 }
-
-.fundamentals {
+.container-fluid .fundamentals {
   justify-content: flex-end;
 }
-
-.card img {
+.container-fluid .card img {
   width: 100%;
 }
-
-.card {
+.container-fluid .card {
   text-align: center;
   margin-bottom: 20px;
 }
-
-.fundamentals, .libraries {
+.container-fluid .fundamentals,
+.container-fluid .libraries {
   padding-bottom: 30px;
 }
-
-.fundamentals span {
+.container-fluid .fundamentals span {
   float: left;
 }
-
-.ldBar {
+.container-fluid .ldBar {
   float: right;
 }
-
-.my-contact {
+.container-fluid .my-contact {
   letter-spacing: 2px;
   line-height: 2.4rem;
+  padding-bottom: 200px;
+  text-align: center;
+}
+@media screen and (min-width: 40em) and (max-width: 64em) {
+  .container-fluid .greeting {
+    line-height: 4rem;
+    margin-bottom: 80px;
+    width: 50%;
+    text-shadow: black 1px 1px;
+    float: left;
+  }
+  .container-fluid .descript {
+    line-height: 4rem;
+    margin-bottom: 80px;
+    width: 50%;
+    text-shadow: black 1px 1px;
+    float: right;
+  }
+  .container-fluid .descript span,
+.container-fluid .greeting span {
+    line-height: 4rem;
+    margin: 4px;
+  }
+  .container-fluid .descript span:nth-child(1) {
+    justify-content: flex-end;
+  }
+  .container-fluid .descript span:nth-child(3) {
+    justify-content: flex-start;
+  }
+  .container-fluid .about-me p {
+    height: auto;
+    line-height: 3rem;
+    padding: 8px;
+    margin: 8px;
+  }
+  .container-fluid .about-me img {
+    margin: 10px;
+    box-shadow: #1c2466 14px 14px;
+  }
+  .container-fluid .card {
+    margin: 20px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .container-fluid .navbar-brand {
+    float: left;
+  }
+  .container-fluid .nav-link {
+    float: right;
+  }
+  .container-fluid .descript {
+    line-height: 4rem;
+    margin-bottom: 80px;
+    width: 50%;
+    text-shadow: black 1px 1px;
+    float: right;
+    height: auto;
+  }
+  .container-fluid .greeting {
+    line-height: 4rem;
+    margin-bottom: 80px;
+    width: 50%;
+    text-shadow: black 1px 1px;
+    float: left;
+    height: auto;
+  }
+  .container-fluid .descript span,
+.container-fluid .greeting span {
+    font-size: 42px;
+    padding: 90px;
+  }
+  .container-fluid .descript span:nth-child(1) {
+    justify-content: flex-end;
+  }
+  .container-fluid .descript span:nth-child(3) {
+    justify-content: flex-start;
+  }
+  .container-fluid .about-me {
+    padding: 200px 40px;
+    line-height: 4rem;
+    text-align: center;
+    font-size: 22px;
+    margin-right: 10px;
+  }
+  .container-fluid .about-me img {
+    width: 18%;
+    box-shadow: #1c2466 14px 14px;
+    margin-left: 10px;
+    margin-bottom: 60px;
+  }
+  .container-fluid .fundamentals h2, .container-fluid .libraries h2 {
+    font-size: 32px;
+    letter-spacing: 0.2rem;
+    padding-top: 20px;
+  }
+  .container-fluid .fundamentals {
+    float: left;
+  }
+  .container-fluid .fundamentals .ldBar {
+    padding-left: 24px;
+  }
+  .container-fluid .libraries {
+    float: right;
+  }
+  .container-fluid .my-skills {
+    height: auto;
+    padding-bottom: 400px;
+    line-height: 4rem;
+    padding-left: 260px;
+    padding-right: 260px;
+  }
+  .container-fluid .my-projects {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  .container-fluid .card {
+    width: 30%;
+    display: inline-block;
+    margin-left: 50px;
+  }
+  .container-fluid .my-links {
+    float: right;
+  }
+  .container-fluid .my-info {
+    float: left;
+    padding-left: 30rem;
+  }
+  .container-fluid .my-contact {
+    text-align: center;
+    padding-bottom: 100px;
+    line-height: 3rem;
+    font-size: 22px;
+    padding-top: 80px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
