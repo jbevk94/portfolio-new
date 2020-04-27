@@ -6002,7 +6002,6 @@ readers do not read off random characters that represent icons */
 * {
   margin: 0;
   padding: 0;
-  font-family: "Satisfy", cursive;
 }
 
 .navbar {
@@ -6077,7 +6076,7 @@ readers do not read off random characters that represent icons */
   padding-bottom: 20px;
 }
 
-.about-me {
+.about-me, .my-skills, .my-projects, .my-contact {
   padding: 20px;
   background-color: #babdd1;
 }
@@ -6090,6 +6089,40 @@ readers do not read off random characters that represent icons */
 
 .about-me p {
   display: inline;
+}
+
+.ldBar {
+  width: 100%;
+}
+
+.fundamentals {
+  justify-content: flex-end;
+}
+
+.card img {
+  width: 100%;
+}
+
+.card {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.fundamentals, .libraries {
+  padding-bottom: 30px;
+}
+
+.fundamentals span {
+  float: left;
+}
+
+.ldBar {
+  float: right;
+}
+
+.my-contact {
+  letter-spacing: 2px;
+  line-height: 2.4rem;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,3 +1,5 @@
+// sass --watch style.scss:style.css
+
 // fonts
 @import "scss/fontawesome.scss";
 @import "scss/solid.scss";
@@ -25,7 +27,7 @@ $title-color: #1b1f46;
 * {
   margin: 0;
   padding: 0;
-  font-family: $body-font;
+//   font-family: $body-font;
 }
 
 // Navbar
@@ -97,16 +99,18 @@ $title-color: #1b1f46;
     justify-content: flex-end;
   
 }
-// About
+// All Pages
 #about, #skills, #projects, #contact{
     padding-top: 25px;
     padding-bottom: 20px;
 }
 
-.about-me{
+.about-me, .my-skills, .my-projects, .my-contact{
     padding: 20px;
     background-color: $background-color;
 }
+
+// About Me
 .about-me img{
     width: 30%;
     float: right;
@@ -118,3 +122,41 @@ $title-color: #1b1f46;
 }
 
 // Skills
+.ldBar{
+    width: 100%;
+}
+
+.fundamentals{
+    justify-content: flex-end;
+}
+
+// Projects
+
+.card img{
+    width: 100%;
+}
+
+.card{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fundamentals, .libraries{
+    padding-bottom: 30px;
+}
+
+.fundamentals span{
+    float: left;
+    
+}
+.ldBar{
+    float: right;
+}
+
+
+
+.my-contact{
+    letter-spacing: 2px;
+    line-height: 2.4rem;
+}
+
