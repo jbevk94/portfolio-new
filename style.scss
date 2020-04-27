@@ -1,8 +1,11 @@
 // sass --watch style.scss:style.css
-
-// fonts
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/_variables.scss";
+@import "node_modules/bootstrap/scss/mixins/_breakpoints.scss";
 @import "scss/fontawesome.scss";
 @import "scss/solid.scss";
+
+
 $title-font: "Sarala", sans-serif;
 $body-font: "Satisfy", cursive;
 // color scheme
@@ -10,25 +13,37 @@ $background-color: #babdd1;
 $accentB-color: #1c2466;
 $accentP-color: #767ba3;
 $title-color: #1b1f46;
-
-
-
 @mixin home-span {
-  line-height: 3rem;
-  letter-spacing: 0.2rem;
-  
-  display: flex;
-  padding-top: 10px;
-  font-size: 26px;
-  padding-bottom: 10px;
-}
-
-
+    line-height: 3rem;
+    letter-spacing: 0.2rem; 
+    display: grid;
+    padding-top: 10px;
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
 * {
   margin: 0;
   padding: 0;
 //   font-family: $body-font;
 }
+
+
+// fonts
+
+
+
+
+
+
+
+
+
+.container-fluid{
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+
+}
+
 
 // Navbar
 .navbar {
@@ -86,19 +101,12 @@ $title-color: #1b1f46;
     justify-content: flex-end;
     
 }
-.descript span:nth-child(3){
-    justify-content: start;
-   
-}
-.descript span:nth-child(2){
+.descript span{
     justify-content: center;
    
 }
 
-.descript span:nth-child(1){
-    justify-content: flex-end;
-  
-}
+
 // All Pages
 #about, #skills, #projects, #contact{
     padding-top: 25px;

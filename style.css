@@ -6004,6 +6004,11 @@ readers do not read off random characters that represent icons */
   padding: 0;
 }
 
+.container-fluid {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
 .navbar {
   background-color: #babdd1;
 }
@@ -6021,7 +6026,7 @@ readers do not read off random characters that represent icons */
 .greeting span {
   line-height: 3rem;
   letter-spacing: 0.2rem;
-  display: flex;
+  display: grid;
   padding-top: 10px;
   font-size: 26px;
   padding-bottom: 10px;
@@ -6036,7 +6041,7 @@ readers do not read off random characters that represent icons */
 .descript span {
   line-height: 3rem;
   letter-spacing: 0.2rem;
-  display: flex;
+  display: grid;
   padding-top: 10px;
   font-size: 26px;
   padding-bottom: 10px;
@@ -6059,16 +6064,8 @@ readers do not read off random characters that represent icons */
   justify-content: flex-end;
 }
 
-.descript span:nth-child(3) {
-  justify-content: start;
-}
-
-.descript span:nth-child(2) {
+.descript span {
   justify-content: center;
-}
-
-.descript span:nth-child(1) {
-  justify-content: flex-end;
 }
 
 #about, #skills, #projects, #contact {
